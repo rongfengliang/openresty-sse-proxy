@@ -1,0 +1,14 @@
+{
+  "name": "sse-nginx-dynamic",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "commonjs",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-sse-middleware": "^3.0.3"
+  },
+  "scripts": {
+    "start":"node app.js"
+  }
+}
