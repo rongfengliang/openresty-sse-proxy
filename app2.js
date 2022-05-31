@@ -16,17 +16,9 @@ app.get('/ssev2', (req, res) => {
     'Content-Type':'text/event-stream'
   });
   setInterval(() => {
-    res.write(`event:xxxx\ndata:${new Date().toLocaleTimeString()}\n\n`)
+    res.write(`event:dalongappdemov2\ndata:${new Date().toLocaleTimeString()}\n\n`)
   }, 1000);
 });
 
-app.get('/ssev3', (req, res) => {
-  res.writeHead(200,{
-    'Content-Type':'text/event-stream'
-  });
-  setInterval(() => {
-    res.write(`event:xxxx\ndata:${new Date().toLocaleTimeString()}\n\n`)
-  }, 1000);
-});
  
 app.listen(3000);

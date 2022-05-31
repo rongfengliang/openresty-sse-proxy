@@ -11007,13 +11007,13 @@ module.exports = {
     '936': 'cp936',
     'cp936': {
         type: '_dbcs',
-        table: function() { return __nccwpck_require__(2486) },
+        table: function() { return __nccwpck_require__(3336) },
     },
 
     // GBK (~22000 chars) is an extension of CP936 that added user-mapped chars and some other.
     'gbk': {
         type: '_dbcs',
-        table: function() { return (__nccwpck_require__(2486).concat)(__nccwpck_require__(4346)) },
+        table: function() { return (__nccwpck_require__(3336).concat)(__nccwpck_require__(4346)) },
     },
     'xgbk': 'gbk',
     'isoir58': 'gbk',
@@ -11025,7 +11025,7 @@ module.exports = {
     // http://www.khngai.com/chinese/charmap/tblgbk.php?page=0
     'gb18030': {
         type: '_dbcs',
-        table: function() { return (__nccwpck_require__(2486).concat)(__nccwpck_require__(4346)) },
+        table: function() { return (__nccwpck_require__(3336).concat)(__nccwpck_require__(4346)) },
         gb18030: function() { return __nccwpck_require__(6258) },
         encodeSkipVals: [0x80],
         encodeAdd: {'€': 0xA2E3},
@@ -21224,7 +21224,7 @@ module.exports = JSON.parse('[["8740","䏰䰲䘃䖦䕸𧉧䵷䖳𧲱䳢𧳅㮕�
 
 /***/ }),
 
-/***/ 2486:
+/***/ 3336:
 /***/ ((module) => {
 
 "use strict";
@@ -21375,18 +21375,10 @@ app.get('/ssev2', (req, res) => {
     'Content-Type':'text/event-stream'
   });
   setInterval(() => {
-    res.write(`event:xxxx\ndata:${new Date().toLocaleTimeString()}\n\n`)
+    res.write(`event:dalongappdemov2\ndata:${new Date().toLocaleTimeString()}\n\n`)
   }, 1000);
 });
 
-app.get('/ssev2', (req, res) => {
-  res.writeHead(200,{
-    'Content-Type':'text/event-stream'
-  });
-  setInterval(() => {
-    res.write(`event:appdemodalong\ndata:${new Date().toLocaleTimeString()}\n\n`)
-  }, 1000);
-});
  
 app.listen(3000);
 })();

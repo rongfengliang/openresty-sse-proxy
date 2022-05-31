@@ -8,7 +8,11 @@ openresty-sse-proxy
 
 ```code
 curl -i -H "token:demoapp" http://localhost/ssev2\?myhost\=sse\&port\=3000
+
+curl -i -H "token:demoapp" http://localhost/ssev2\?myhost\=sse2\&port\=3000
+
 ```
+
 
 * with sse client
 

@@ -6,6 +6,12 @@ services:
      dockerfile: Dockerfile-node
     ports:
       - 3000:3000
+  sse2:
+    build: 
+     context: ./
+     dockerfile: Dockerfile-node2
+    ports:
+      - 3001:3000
   app:
     build: ./
     ports:
